@@ -16,6 +16,7 @@ PHALUXの公式ウェブサイト用リポジトリです。
 
 ## 📂 リポジトリ構成
 
+```
 phalux/
 ├─ index.html ← トップページ
 ├─ about.html ← プロフィールページ
@@ -27,10 +28,7 @@ phalux/
 ├─ js/
 │ └─ main.js
 └─ images/
-
-yaml
-コードをコピーする
-
+```
 ---
 
 ## ⚡ 注意事項
