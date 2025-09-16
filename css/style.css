@@ -1,6 +1,15 @@
 /* Reset & basic styles */
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: Arial, sans-serif; }
+
+body {
+  font-family: Arial, sans-serif;
+  background: 
+    linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), /* 白の半透明 */
+    url('/images/background/background.jpg'); /* 下の画像 */
+  background-size: cover;   /* 全面に広げる */
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
 /* Header */
 header {
@@ -8,14 +17,18 @@ header {
   justify-content: space-between; /* 左右に振り分け */
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #111;
+  background-color: rgba(0, 0, 0, 0.8); /* 不透明度80% */
   color: white;
 }
 .logo {
   font-size: 30px;
   right: 0;
-  font-weight: 700;
+  font-weight: 800;
   padding-left: 14px;
+}
+.logo a {
+  color:#fff;
+  text-decoration: none;
 }
 .hamburger-menu {
   right: 0;
@@ -61,7 +74,7 @@ header {
 }
 .navigation {
   display: none;
-  background: #111;
+  background: rgba(0, 0, 0, 0.8); /* 不透明度80% */
   position: absolute;
   top: 82px;
   left: 0;
@@ -93,12 +106,25 @@ header {
     background: #333;
   }
 }
-
 /* Main content */
 main {
   display: flex;
   min-height: 80vh;
   position: relative;
+}
+.main-contents {
+  position: relative;
+  margin-left: 60px; /* サイドバー分 */
+  width: calc(100% - 60px); 
+}
+section.contents {
+  margin: 80px;
+}
+h3.title {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 50px;
+    font-weight: 700;
 }
 .slider {
   position: relative;
@@ -125,6 +151,7 @@ main {
   left:0;
   width: 60px;
   height: 100%;
+  background-color: rgba(255, 255, 255, 0.5)
 }
 
 /* SNS Sidebar */
@@ -149,7 +176,7 @@ footer {
   left: 0;
   height: 120px;
   width: 100%;
-  background: #222;
+  background: rgba(0, 0, 0, 0.8); /* 不透明度80% */
   color: #ffffffae;
   text-align: center;
   padding: 2rem 1rem;

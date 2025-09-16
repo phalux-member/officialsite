@@ -1,0 +1,14 @@
+p.profile {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: #555;
+}
+h4.sub-title {
+  font-size: 30px;
+  font-weight: 700;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #ccc;
+}
