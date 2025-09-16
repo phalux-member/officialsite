@@ -21,10 +21,12 @@ header {
   color: white;
 }
 .logo {
+  font-family: 'Yu Mincho', '游明朝', serif;;
   font-size: 30px;
   right: 0;
-  font-weight: 800;
+  font-weight: 900;
   padding-left: 14px;
+  letter-spacing: 2px;
 }
 .logo a {
   color:#fff;
@@ -80,6 +82,8 @@ header {
   left: 0;
   width: 100%;
   z-index: 9999;
+  font-family: 'Yu Mincho', '游明朝', serif;
+  font-size: 1.7rem;
 }
 .navigation__list {
   text-align: center;
@@ -103,7 +107,7 @@ header {
 }
 @media (hover: hover) and (pointer: fine) {
   .navigation__link:hover {
-    background: #333;
+    background: rgba(132, 86, 86, 0.7);
   }
 }
 /* Main content */
@@ -126,23 +130,37 @@ h3.title {
     font-size: 50px;
     font-weight: 700;
 }
-.slider {
+.slider{
+  margin-left: 60px;
+  width: calc(100% - 60px);
+  padding-top: 56.25%; /* 元の 16:9 高さを確保 */
   position: relative;
-  margin-left: 60px; /* サイドバー分 */
-  width: calc(100% - 60px); 
-  padding-top: 56.25%; /* 16:9 */
-  overflow: hidden;
 }
-.slider img {
+.items{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+}
+.item{
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  display: none;
+  opacity: 0;
+  transition: opacity .6s ease-in-out;
 }
-.slider img.active { display: block; }
+.current{
+  opacity: 1;
+}
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 /* Sidebar */
 .sidebar {
@@ -211,5 +229,3 @@ footer a {
   font-weight:lighter;
   transition: color 0.3s;
 }
-
-/*　TODO サイズが大きいときにnavがdisplay:noneになってたら強制的に表示するようにする */

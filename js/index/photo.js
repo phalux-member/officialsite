@@ -1,13 +1,7 @@
-$(document).ready(function() {
-  let slides = $(".slider img");
-  let currentIndex = 0;
-
-  slides.hide();
-  slides.eq(currentIndex).show();
-
-  setInterval(function() {
-    slides.eq(currentIndex).fadeOut(1000).removeClass("active");
-    currentIndex = (currentIndex + 1) % slides.length;
-    slides.eq(currentIndex).fadeIn(1000).addClass("active");
-  }, 4000);
-});
+function slider(){
+  var current = $('.item.current'),
+      next = current.is(':last-child') ? $('.item').first() : current.next();
+  next.addClass('current');
+  current.removeClass('current');
+}
+var setSlider = setInterval( slider, 4000);
