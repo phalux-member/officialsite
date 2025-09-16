@@ -5,45 +5,93 @@ body { font-family: Arial, sans-serif; }
 /* Header */
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* 左右に振り分け */
   align-items: center;
   padding: 1rem 2rem;
   background-color: #111;
   color: white;
+}
+.logo {
+  font-size: 30px;
+  right: 0;
+  font-weight: 700;
+  padding-left: 14px;
+}
+.hamburger-menu {
+  right: 0;
+  width: 50px;
+  height: 50px;
   position: relative;
-}
-header .logo { font-size: 1.5rem; font-weight: bold; }
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-}
-nav ul li a {
-  text-decoration: none;
-  color: white;
-  font-weight: 500;
-}
-
-nav ul li a:hover{
-  color: #f0a500; /* ホバー時の色変更 */
-}
-
-/* Hamburger menu */
-.hamburger {
-  display: none;
-  font-size: 1.5rem;
+  border: none;
+  background: transparent;
+  appearance: none;
+  padding: 0;
   cursor: pointer;
 }
-nav.mobile-menu {
-  display: none;
-  flex-direction: column;
-  gap: 1rem;
+.hamburger-menu__bar {
+  display: inline-block;
+  width: 44%;
+  height: 2px;
+  background: #ffffff;
   position: absolute;
-  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: .5s;
+}
+.hamburger-menu__bar:first-child {
+  top: 16px;
+}
+.hamburger-menu__bar:nth-child(2) {
+  top: 24px;
+}
+.hamburger-menu__bar:last-child {
+  top: 32px;
+}
+.hamburger-menu--open .hamburger-menu__bar {
+  top: 50%;
+}
+.hamburger-menu--open .hamburger-menu__bar:first-child {
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+.hamburger-menu--open .hamburger-menu__bar:last-child {
+  transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+}
+.hamburger-menu--open .hamburger-menu__bar:nth-child(2) {
+  display: none;
+}
+.navigation {
+  display: none;
+  background: #111;
+  position: absolute;
+  top: 82px;
   left: 0;
-  background-color: #111;
   width: 100%;
-  padding: 1rem 2rem;
+  z-index: 9999;
+}
+.navigation__list {
+  text-align: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.navigation__list-item {
+  border-bottom: solid 1px #474747;
+}
+.navigation__list-item:first-child {
+  border-top: solid 1px #474747;
+}
+.navigation__link {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  display: block;
+  padding: 24px 0;
+  transition: .5s;
+}
+@media (hover: hover) and (pointer: fine) {
+  .navigation__link:hover {
+    background: #333;
+  }
 }
 
 /* Main content */
@@ -55,8 +103,8 @@ main {
 .slider {
   position: relative;
   margin-left: 60px; /* サイドバー分 */
-  width: calc(100% - 60px); /* 画面幅からサイドバー分を引く */ 
-  padding-top: 56.25%; /* 16:9 の比率 (9/16 = 0.5625) */ 
+  width: calc(100% - 60px); 
+  padding-top: 56.25%; /* 16:9 */
   overflow: hidden;
 }
 .slider img {
@@ -65,12 +113,11 @@ main {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* 16:9比率を保ったままコンテナを覆う */
+  object-fit: cover;
   display: none;
 }
-.slider img.active {
-  display: block;
-}
+.slider img.active { display: block; }
+
 /* Sidebar */
 .sidebar {
   position: absolute;
@@ -79,6 +126,7 @@ main {
   width: 60px;
   height: 100%;
 }
+
 /* SNS Sidebar */
 .sns-sidebar {
   position: fixed;
@@ -95,52 +143,41 @@ main {
   height: 40px;
 }
 
+/* Footer */
 footer {
-  bottom: 0;         /* 下端に配置 */
-  left: 0;           /* 左端に合わせる */
+  bottom: 0;
+  left: 0;
   height: 120px;
-  width: 100%;       /* 横幅いっぱい */
-  background: #222;  /* 好みの背景色 */
-  color: #fff;       /* 文字色 */
-  text-align: center;
-  padding: 1rem;
-  z-index: 1000;     /* 他の要素より前面に表示 */
-}
-footer {
+  width: 100%;
   background: #222;
   color: #ffffffae;
   text-align: center;
-  padding: 2rem 1rem; /* 上下2rem、左右1rem */
-  font-family: 'Yu Mincho', '游明朝', serif; /* 游明朝指定 */
-  font-weight: 300; /* 細字 */
+  padding: 2rem 1rem;
+  font-family: 'Yu Mincho', '游明朝', serif;
+  font-weight: 300;
   font-size:x-small;
 }
-
 footer .footer-links {
-  list-style: none;       /* デフォルトの箇条書きマークを消す */
+  list-style: none;
   padding: 0;
-  margin: 0 0 1rem 0;     /* 下に余白を追加 */
+  margin: 0 0 1rem 0;
   display: flex;
-  justify-content: center; /* 中央揃え */
-  gap: 2rem;              /* リンク間の間隔 */
+  justify-content: center;
+  gap: 2rem;
 }
-
 footer .footer-links li a {
   color: #ffffffae;
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s;
 }
-
 footer .footer-links li a:hover {
-  color: #f0a500; /* ホバー時の色変更 */
+  color: #f0a500;
 }
-
 footer p {
-    font-size: xx-small;
-    padding: 3px;
+  font-size: xx-small;
+  padding: 3px;
 }
-
 footer a {
   color: #ffffffae;
   text-decoration: none;
@@ -148,8 +185,4 @@ footer a {
   transition: color 0.3s;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  nav ul { display: none; }
-  .hamburger { display: block; }
-}
+/*　TODO サイズが大きいときにnavがdisplay:noneになってたら強制的に表示するようにする */

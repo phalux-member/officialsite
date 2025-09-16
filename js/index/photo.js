@@ -2,7 +2,7 @@ $(document).ready(function() {
   let slides = $(".slider img");
   let currentIndex = 0;
 
-//   slides.hide();
+  slides.hide();
   slides.eq(currentIndex).show();
 
   setInterval(function() {
