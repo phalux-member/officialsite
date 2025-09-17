@@ -5,7 +5,7 @@ body {
   font-family: Arial, sans-serif;
   background: 
     linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), /* 白の半透明 */
-    url('/images/background/background.jpg'); /* 下の画像 */
+    url('../images/background/background.jpg'); /* 下の画像 */
   background-size: cover;   /* 全面に広げる */
   background-position: center;
   background-repeat: no-repeat;
