@@ -12,12 +12,10 @@ body::before {
   left: 50%;
   width: 100%;
   height: 100%;
-  background: 
-    linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.95)), /* 白の半透明 */
-    url('../images/logos/logo_phalux.svg'); /* 下の画像 */
+  background: url('../images/background/phalux_background.jpg'); /* 下の画像 */
   background-size: cover;       /* 全面に表示 */
   transform: translate(-50%, -50%); /* 常に画面中央に */
-  filter: grayscale(55%);      /* 白黒化 */
+  /*filter: grayscale(55%); */     /* 白黒化 */
   z-index: -1;
 }
 
@@ -31,7 +29,7 @@ header {
   color: white;
 }
 .logo {
-  font-family: 'Yu Mincho', '游明朝', serif;;
+  font-family: 'Yu Mincho', '游明朝', serif;
   font-size: 30px;
   right: 0;
   font-weight: 900;
@@ -41,6 +39,10 @@ header {
 .logo a {
   color:#fff;
   text-decoration: none;
+}
+.logo img {
+  width: 60px;
+  filter: invert(100%);
 }
 .hamburger-menu {
   right: 0;
@@ -139,7 +141,11 @@ h3.title {
     margin-bottom: 50px;
     font-size: 50px;
     font-weight: 700;
+    color: #fff;
     border-bottom: 1px solid #ccc;
+}
+h4.subtitle {
+  color: #fff;
 }
 .slider{
   margin-left: 60px;
@@ -173,6 +179,28 @@ img{
   object-fit: cover;
 }
 
+/* YouTube */
+.youtube-wrapper {
+  position: relative;
+  width: 100%;
+  height: calc(100vw * 9 / 16); /* 16:9 のアスペクト比を保つ */
+  max-height: 365.625px; /* 最大高さを設定 */
+  max-width: 650px; /* 最大幅を設定 */
+  /* padding-bottom: 56.25%; */
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 120px;
+  margin-bottom: 120;
+}
+.youtube-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 /* Sidebar */
 .sidebar {
   position: absolute;
@@ -180,7 +208,7 @@ img{
   left:0;
   width: 60px;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.5)
+  background-color: rgba(255, 255, 255, 0.0)
 }
 
 /* SNS Sidebar */
@@ -203,9 +231,9 @@ img{
 footer {
   bottom: 0;
   left: 0;
-  height: 120px;
+  height: 80px;
   width: 100%;
-  background: rgba(0, 0, 0, 0.8); /* 不透明度80% */
+  background: rgba(233, 233, 233, 0.0); /* 不透明度80% */
   color: #ffffffae;
   text-align: center;
   padding: 2rem 1rem;
@@ -239,4 +267,89 @@ footer a {
   text-decoration: none;
   font-weight:lighter;
   transition: color 0.3s;
+}
+
+@media screen and (max-width: 768px) {
+  body::before {
+    content: "";
+    position: fixed;       /* ページスクロールしても固定 */
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: url('../images/background/phalux_background_sp.jpg'); /* 下の画像 */
+    background-size: cover;       /* 全面に表示 */
+    transform: translate(-50%, -50%); /* 常に画面中央に */
+    /*filter: grayscale(55%); */     /* 白黒化 */
+    z-index: -1;
+  }
+
+  .logo {
+    font-family: 'Yu Mincho', '游明朝', serif;
+    font-size: 20px;
+    right: 0;
+    font-weight: 900;
+    padding-left: 14px;
+    letter-spacing: 2px;
+  }
+
+  .logo img {
+    width: 40px;
+    filter: invert(100%);
+  }
+
+  /* Navigation */
+  .navigation {
+    display: none;
+    background: rgba(0, 0, 0, 0.8); /* 不透明度80% */
+    position: absolute;
+    top: 82px;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    font-family: 'Yu Mincho', '游明朝', serif;
+    font-size: 1.2rem;
+  }
+  .navigation__list {
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .navigation__list-item {
+    border-bottom: solid 1px #474747;
+  }
+  .navigation__list-item:first-child {
+    border-top: solid 1px #474747;
+  }
+  .navigation__link {
+    color: #fff;
+    font-weight: 400;
+    text-decoration: none;
+    display: block;
+    padding: 24px 0;
+    transition: .5s;
+  }
+
+  /* YouTube */
+  .youtube-wrapper {
+    position: relative;
+    width: 100%;
+    height: calc(100vw * 9 / 16); /* 16:9 のアスペクト比を保つ */
+    max-height: 168.75px; /* 最大高さを設定 */
+    max-width: 300px; /* 最大幅を設定 */
+    /* padding-bottom: 56.25%; */
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: 120px;
+    margin-bottom: 120px;
+  }
+  .youtube-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
 }

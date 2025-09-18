@@ -1,4 +1,4 @@
-# PHALUX Official Website
+# PHALUX Website
 
 PHALUXの公式ウェブサイト用リポジトリです。
 
