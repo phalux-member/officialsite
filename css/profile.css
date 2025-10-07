@@ -1,8 +1,20 @@
+p.profile-title {
+  text-align: center;
+  font-size: 2em;
+  color:#ffffff;
+  font: bold;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
 p.profile {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
   color: #ffffff;
-  line-height: 2;
+  line-height: 2.5;
+  font-size: 1em;
+}
+div.profile-area {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
 }
 h4.sub-title {
   font-size: 30px;
@@ -13,4 +25,24 @@ h4.sub-title {
   margin-top: 30px;
   margin-bottom: 30px;
   border-bottom: 1px solid #ccc;
+}
+@media screen and (max-width: 768px) {
+  p.profile-title {
+    text-align: center;
+    font-size: 0.9em;
+    color:#ffffff;
+    font: bold;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+  p.profile {
+    color: #ffffff;
+    line-height: 2;
+    font-size: 0.9em;
+  }
+  div.profile-area {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+  }
 }

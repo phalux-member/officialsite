@@ -17,12 +17,12 @@ PHALUXの公式ウェブサイト用リポジトリです。
 ## 📂 リポジトリ構成
 
 ```
-html/
-├─ index.html ← トップページ
-├─ about.html ← プロフィールページ
-├─ schedule.html ← スケジュールページ
-├─ gallery.html ← ギャラリーページ
-└─ contact.html ← お問い合わせページ
+index.html
+profile/index.html
+news/index.html
+gallery/index.html
+goods/index.html
+contact/index.html
 css/
  └─ style.css
 js/

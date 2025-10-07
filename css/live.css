@@ -1,0 +1,35 @@
+div.live-card {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 40px;
+}
+p.live-info {
+    text-align: center;
+    color: #ffffff;
+    line-height: 2;
+    font-size: 1.2em;
+}
+img.live-flyer {
+    display: block;
+    width: 300px;
+    margin: 0 auto;
+    box-shadow: 15px 15px 20px rgba(115, 115, 115, 0.5)
+}
+@media screen and (max-width: 768px) {
+  div.live-card {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 30px;
+  }
+  p.live-info {
+    text-align: center;
+    color: #ffffff;
+    line-height: 2;
+    font-size: 0.9em;
+  }
+  img.live-flyer {
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+  }
+}
