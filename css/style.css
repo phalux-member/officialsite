@@ -361,7 +361,9 @@ footer a {
     padding: 24px 0;
     transition: .5s;
   }
-
+  section.contents {
+    margin: 40px;
+  }
   /* YouTube */
   .youtube-wrapper {
     position: relative;
