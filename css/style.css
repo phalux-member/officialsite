@@ -134,7 +134,7 @@ main {
 main p {
   text-shadow: 0px 0px 25px rgb(255, 255, 255);
 }
-.main-contents {
+.container {
   position: relative;
   margin-left: 60px; /* サイドバー分 */
   width: calc(100% - 60px); 
