@@ -24,7 +24,7 @@ header {
   display: flex;
   justify-content: space-between; /* 左右に振り分け */
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   background-color: rgba(0, 0, 0, 0.8); /* 不透明度80% */
   color: white;
 }
@@ -38,6 +38,8 @@ a {
   font-weight: 900;
   padding-left: 14px;
   letter-spacing: 2px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .logo a {
   color:#fff;
@@ -46,6 +48,7 @@ a {
 .logo img {
   width: 60px;
   filter: invert(100%);
+  margin-left: 5px;
 }
 .hamburger-menu {
   right: 0;
