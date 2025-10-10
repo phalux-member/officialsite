@@ -1,4 +1,10 @@
 div.live-card {
+    display: flex;
+    /* align-items: flex-start; */
+      align-items: center;   
+       justify-content: center;
+    gap: 20px;
+    color: #fff;
     margin-top: 40px;
     margin-bottom: 40px;
     padding: 40px;
@@ -7,16 +13,17 @@ p.live-info {
     text-align: center;
     color: #ffffff;
     line-height: 2;
-    font-size: 1.2em;
+    font-size: 1em;
+    margin: 20px 60px 20px  60px;
 }
 img.live-flyer {
-    display: block;
-    width: 300px;
-    margin: 0 auto;
+    width: 200px;
+    margin: 0px;
     box-shadow: 0px 0px 5px rgb(255, 255, 255)
 }
 @media screen and (max-width: 768px) {
   div.live-card {
+    display: block;
     margin-top: 15px;
     margin-bottom: 15px;
     padding: 30px;
@@ -26,10 +33,11 @@ img.live-flyer {
     color: #ffffff;
     line-height: 2;
     font-size: 0.9em;
+    margin: 0px
   }
   img.live-flyer {
     display: block;
-    width: 200px;
+    width: 180px;
     margin: 0 auto;
   }
 }
