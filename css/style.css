@@ -134,9 +134,6 @@ main {
   min-height: 80vh;
   position: relative;
 }
-main p {
-  text-shadow: 0px 0px 25px rgb(255, 255, 255);
-}
 .container {
   position: relative;
   margin-left: 60px; /* サイドバー分 */
